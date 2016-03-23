@@ -1,0 +1,171 @@
+
+<!DOCTYPE html> 
+
+<script>
+ptrSpan = document.getElementById("warn");
+
+function check() {
+    
+  var ptrP1 = document.getElementById('pwd');
+  var ptrP2 = document.getElementById('confirmpwd');
+
+  if (   ptrP1.value !=  ptrP2.value  )  
+    {
+      alert("bad data");
+	  document.getElementById('confirmpwd').value=null;
+    }
+  
+ }
+</script>
+
+<form action="register.php" >
+
+<style>
+
+input[type=text], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+
+body { background-image: url("plane2background.png"); 
+	   background-repeat: no-repeat;
+	   background-position: center;
+       background-attachment: fixed; 
+	   background-size: cover; }
+
+</style>
+
+<h1><font color="white" face="Trebuchet MS">Registration Page</font></h1>
+
+<label for="user">  </label>		
+
+
+
+<input type=text name="user"
+
+		placeholder="Username"
+
+		autocomplete=off  
+
+		id="user"><br>
+
+		
+
+<label for="password">  </label>		
+
+
+
+<input type=password name="pwd"
+
+		placeholder="Password"
+
+		required="required"  
+
+		id="pwd"><br>
+
+
+
+<label for="confirm password">  </label>		
+
+
+
+<input type=password name="confirmpwd"
+
+		placeholder="Confirm Password"
+
+		required="required"  
+
+		id="confirmpwd"
+		
+		onblur="check()"><br><br>
+
+<span id="warn"></span><br>
+
+
+
+<label for="fullname">  </label>
+
+
+
+<input type=text name="fullname"
+
+		placeholder="fullname"
+
+		required="required"  
+
+		autocomplete=off
+		
+		id="fullname"><br>
+
+
+
+<label for="email">  </label>		
+
+
+
+<input type=email name="email"
+
+		placeholder="Email"
+
+		required="required"  
+
+		autocomplete=off
+		
+		id="email">
+
+
+		
+<input type = checkbox name="mail" id = "mail" > <font color="white" face="Trebuchet MS">Send Copy</font><br>
+
+
+
+<input type=submit>		
+
+
+</form>
